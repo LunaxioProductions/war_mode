@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace JoostMod.Items
+namespace WarModeMod.Items
 {
     [AutoloadEquip(EquipType.Shoes)]
     public class HoverBoots : ModItem
@@ -22,7 +22,7 @@ namespace JoostMod.Items
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<JoostPlayer>().hoverBoots = true;
+            player.GetModPlayer<WarModePlayer>().hoverBoots = true;
         }
     }
 }
