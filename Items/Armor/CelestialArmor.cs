@@ -2,15 +2,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace JoostMod.Items.Armor
+namespace WarModeMod.Items.Armor
 {
     [AutoloadEquip(EquipType.Body)]
     public class ZoraArmor : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Zora Armor");
-            Tooltip.SetDefault("20% increased magic damage");
+            DisplayName.SetDefault("Celestial Armor");
+            Tooltip.SetDefault("20% increased damage");
         }
         public override void SetDefaults()
         {
@@ -18,7 +18,7 @@ namespace JoostMod.Items.Armor
             item.height = 18;
             item.value = 300000;
             item.rare = 5;
-            item.defense = 15;
+            item.defense = 127;
         }
         public override void UpdateEquip(Player player)
         {
@@ -28,9 +28,7 @@ namespace JoostMod.Items.Armor
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "WaterEssence", 50);
-            recipe.AddRecipeGroup("JoostMod:AnyCobalt", 8);
-            recipe.AddRecipeGroup("JoostMod:AnyMythril", 8);
-            recipe.AddRecipeGroup("JoostMod:AnyAdamantite", 8);
+
             recipe.AddTile(null, "ElementalForge");
             recipe.SetResult(this);
             recipe.AddRecipe();
